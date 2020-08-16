@@ -61,7 +61,7 @@
         },
         "storageAccountSku": {
             "type": "string",
-            "defaultValue": "Standard_GRS",
+            "defaultValue": "Standard_LRS",
             "metadata": {
                 "description": "The storage Sku"
             }
@@ -74,7 +74,7 @@
         },
         "iotHubSku": {
             "type": "string",
-            "defaultValue": "S2",
+            "defaultValue": "F1",
             "metadata": {
                 "description": "The Iothub Sku"
             }
@@ -161,7 +161,7 @@
         "location": "[resourceGroup().location]",
         "storageVersion": "2016-01-01",
         "storageId": "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageName'))]",
-        "ehVersion": "[providers('Microsoft.Eventhub', 'namespaces').apiVersions[0]]",
+        "ehVersion": "[providers('Microsoft.Eventhub', 'namespaces').apiVersions[1]]",
         "ehOutName": "[concat(parameters('ehName'), '-ehout')]",
         "ehRuleOutName": "[concat(parameters('ehName'), '-ehruleout')]",
         "sbKeyName": "RootManageSharedAccessKey",
